@@ -10,18 +10,16 @@
 const toggleBtn = document.getElementById('theme-toggle');
 const darkModeClass = 'dark-mode';
 
-// تحميل الوضع المحفوظ من localStorage عند بدء الصفحة
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') {
     document.body.classList.add(darkModeClass);
-    toggleBtn.textContent = '☀️'; // أيقونة الشمس عند الداكن
+    toggleBtn.textContent = '☀️'; // أ
   } else {
-    toggleBtn.textContent = '🌙'; // أيقونة الهلال عند الفاتح
+    toggleBtn.textContent = '🌙'; // 
   }
 });
 
-// عند الضغط على الزر، قم بالتبديل واحفظ الحالة
 toggleBtn.addEventListener('click', () => {
   const isDark = document.body.classList.toggle(darkModeClass);
 
@@ -34,4 +32,16 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 
+//search
+const searchIcon = document.querySelector('.search-icon');
+      searchIcon.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const searchBox = this.querySelector('.search-box');
+        searchBox.style.display = searchBox.style.display === 'block' ? 'f' : 'block';
+    });
+
+// move to work page
+      //  document.getElementsByClassName('Explor-btn').addEventListener('click', function() {
+      //       window.location.href = 'work.html';
+      //   });
 // //////////////
